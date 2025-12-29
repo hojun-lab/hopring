@@ -21,5 +21,5 @@ classDiagram
 ```mermaid
     sequenceDiagram
         클래스 ->> DefaultListableBeanFactory: Bean 등록
-        DefaultListableBeanFactory ->> BeanDefinition: Class 이름과 함께, 
+        DefaultListableBeanFactory ->> BeanDefinition: Class 이름과 함께,  
 ```
