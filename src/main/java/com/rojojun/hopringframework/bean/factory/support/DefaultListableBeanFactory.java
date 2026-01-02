@@ -41,6 +41,11 @@ public class DefaultListableBeanFactory implements BeanFactory, BeanDefinitionRe
                 .orElseThrow(() -> new BeanException("빈을 찾을 수 없습니다 : " + beanName));
     }
 
+    @Override
+    public boolean containsBeanDefinition(String beanName) {
+        return beanDefinitionMap.containsKey(beanName);
+    }
+
     private Object createBean(String name, BeanDefinition beanDefinition) {
         try {
              Constructor<?> constructor = beanDefinition.getBeanClass()
